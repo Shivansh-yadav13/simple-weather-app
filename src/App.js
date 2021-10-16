@@ -8,7 +8,7 @@ function App() {
     navigator.geolocation.getCurrentPosition((position) => {
       console.log(position.coords)
       const getData = async () => {
-        const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude ? position.coords.latitude : "43"}&lon=${position.coords.longitude ? position.coords.longitude : "-75"}&exclude={part}&appid=${{ secrets.WEATHER_API_KEY }}`)
+        const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude ? position.coords.latitude : "43"}&lon=${position.coords.longitude ? position.coords.longitude : "-75"}&exclude={part}&appid=e0287bfe6f6cd9dd38ea0827934ae179`)
         const parsedWeatherData = await weatherData.json()
         console.log(parsedWeatherData)
         setWeatherData(parsedWeatherData)
