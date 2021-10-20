@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="main-div">
       <div className="alert alert-danger" role="alert" style={weatherData ? (weatherData.alerts ? { display: "unset" } : { display: "none" }) : { display: "none" }}>
-        {weatherData ? weatherData.alerts[0].description : ""}
+        {weatherData ? (weatherData.alerts ? weatherData.alerts[0].description : "") : ""}
       </div>
       <p className="main-heading">Simple Weather App 🌤</p>
       <p className="region" >Region: {weatherData ? weatherData.timezone : <div class="spinner-border text-primary" role="status">
