@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/simple-weather-app/static/css/main.1e9ef18c.chunk.css",
-    "main.js": "/simple-weather-app/static/js/main.f9d3fcd7.chunk.js",
-    "main.js.map": "/simple-weather-app/static/js/main.f9d3fcd7.chunk.js.map",
+    "main.js": "/simple-weather-app/static/js/main.07c59b9b.chunk.js",
+    "main.js.map": "/simple-weather-app/static/js/main.07c59b9b.chunk.js.map",
     "runtime-main.js": "/simple-weather-app/static/js/runtime-main.0b846ea1.js",
     "runtime-main.js.map": "/simple-weather-app/static/js/runtime-main.0b846ea1.js.map",
     "static/js/2.219d7e32.chunk.js": "/simple-weather-app/static/js/2.219d7e32.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0b846ea1.js",
     "static/js/2.219d7e32.chunk.js",
     "static/css/main.1e9ef18c.chunk.css",
-    "static/js/main.f9d3fcd7.chunk.js"
+    "static/js/main.07c59b9b.chunk.js"
   ]
 }
