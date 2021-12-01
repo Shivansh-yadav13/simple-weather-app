@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Poppins';
-    background-image: linear-gradient(to bottom,  #58c2f6, #fff);
+    background-image: linear-gradient(to bottom,  rgb(33, 166, 255), #ff2727);
 }
 
 .day-div {
