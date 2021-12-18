@@ -1,91 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-    font-family: 'Poppins';
-    background-image: linear-gradient(to bottom,  rgb(33, 166, 255), #ff2727);
-}
-
-.day-div {
-    background: linear-gradient(274deg, #e1f5ff, #9fe5ff, #b5def6, #adcaff);
-    background-size: 800% 800%;
-    font-family: 'Poppins';
-
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 79%}
-    50%{background-position:100% 22%}
-    100%{background-position:0% 79%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 79%}
-    50%{background-position:100% 22%}
-    100%{background-position:0% 79%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 79%}
-    50%{background-position:100% 22%}
-    100%{background-position:0% 79%}
-}
-
-h1,
-h2,
-h3,
-p {
-    padding: 0;
-    margin: 0;
-}
-
-.main-div {
-    text-align: center;
-}
-
-.main-heading {
-    font-size: 5rem;
-    text-transform: uppercase;
-}
-
-.region {
-    font-size: 3rem;
-}
-
-.heading {
-    font-size: 2rem;
-}
-
-.w-el {
-    font-size: 1.5rem;
-}
-
-.current-weather {
-    text-align: center;
-}
-
-.daily-weather {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    row-gap: 2rem;
-}
-
-
-.day-div {
-    /* margin-left: 2.8rem; */
-    display: flex;
-    flex-direction: column;
-    width: 25rem;
-    /* background-image: linear-gradient(to top, rgb(26, 99, 195), rgb(56, 134, 236)); */
-    border-radius: 50px;
-    font-size: 1.3rem;
-}
-
-.header {
-    font-size: 1.5rem;
-}
-
-.heading {
-    margin: 2rem;
-    font-size: 5rem;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(270deg, #12b0cc, #045c6b);
+    color: white;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
+    
 }
