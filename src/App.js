@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import './App.css'
 
 import CurrentWeather from './components/CurrentWeather'
 import DailyWeather from './components/DailyWeather'
-import Navbar from './components/Navbar'
 
 function App() {
   const [weatherData, setWeatherData] = useState()
@@ -24,20 +22,23 @@ function App() {
   }, [])
   return (
     <Container>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route exact path='/' element={<CurrentWeather weatherData={weatherData} />} />
-          <Route exact path='/weekly-weather' element={<DailyWeather weatherData={weatherData} />} />
-        </Routes>
-      </Router>
-      
+      <Heading>Simple Weather App 🌤</Heading>
+      <div className="alert alert-danger" role="alert" style={weatherData ? (weatherData.alerts ? { display: "unset" } : { display: "none" }) : { display: "none" }}>
+        {weatherData ? (weatherData.alerts ? weatherData.alerts[0].description : "") : ""}
+      </div>
+      {weatherData ? <h5>Region: {weatherData.timezone}</h5> : <h5>Region: Finding you...</h5>}
+      <CurrentWeather weatherData={weatherData} />
+      <DailyWeather weatherData={weatherData} />
     </Container>
   )
 }
 
 const Container = styled.div`
   text-align: center;
+`
+
+const Heading = styled.h1`
+  font-size: 5rem;
 `
 
 export default App;

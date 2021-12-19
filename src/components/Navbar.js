@@ -9,7 +9,6 @@ function Navbar() {
             <UL>
                 <Link to='/'><Items>Home</Items></Link>
                 <Link to='/weekly-weather'><Items>Weekly</Items></Link>
-                <Items>Weather News</Items>
             </UL>
         </Nav>
     )
