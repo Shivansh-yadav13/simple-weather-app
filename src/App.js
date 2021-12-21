@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
 import './App.css'
 
 import CurrentWeather from './components/CurrentWeather'
@@ -21,24 +20,16 @@ function App() {
     })
   }, [])
   return (
-    <Container>
-      <Heading>Simple Weather App 🌤</Heading>
+    <div style={{textAlign: 'center'}}>
+      <h1 style={{fontSize: '5rem', padding: '2rem'}} >Simple Weather App 🌤</h1>
       <div className="alert alert-danger" role="alert" style={weatherData ? (weatherData.alerts ? { display: "unset" } : { display: "none" }) : { display: "none" }}>
         {weatherData ? (weatherData.alerts ? weatherData.alerts[0].description : "") : ""}
       </div>
       {weatherData ? <h5>Region: {weatherData.timezone}</h5> : <h5>Region: Finding you...</h5>}
       <CurrentWeather weatherData={weatherData} />
       <DailyWeather weatherData={weatherData} />
-    </Container>
+    </div>
   )
 }
-
-const Container = styled.div`
-  text-align: center;
-`
-
-const Heading = styled.h1`
-  font-size: 5rem;
-`
 
 export default App;

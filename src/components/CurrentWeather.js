@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Container, Card, UL, Chart } from './Styles'
 import { CartesianGrid, Legend, LineChart, Tooltip, XAxis, YAxis, Line } from 'recharts'
 
 function CurrentWeather({ weatherData }) {
@@ -19,8 +19,8 @@ function CurrentWeather({ weatherData }) {
     return (
         <>
             <Container>
-                <Card>
-                    <LeftContent>
+                <Card fontSize="1.5rem" width="50rem">
+                    <div>
                         <UL>
                             <li>{weatherData ? Math.trunc(weatherData.current.temp - 273) : <span className="placeholder col-1"></span>}°C</li>
                             <li>Humidity: - {weatherData ? weatherData.current.humidity : <span className="placeholder col-1"></span>}%</li>
@@ -28,12 +28,12 @@ function CurrentWeather({ weatherData }) {
                             <li>Weather: - {weatherData ? weatherData.current.weather[0].main : <span className="placeholder col-1"></span>}</li>
                             <li>Dew Point: - {weatherData ? Math.trunc(weatherData.current.dew_point - 273) : <span className="placeholder col-1"></span>}°C</li>
                         </UL>
-                    </LeftContent>
-                    <RightContent>
-                        {weatherData ? <img style={{ width: '5rem' }} src={`http://localhost:8080/images/${weatherData.current.weather[0].main}.png`} alt="" /> : ""}
-                    </RightContent>
+                    </div>
+                    <div>
+                        {weatherData ? <img style={{ width: '5rem' }} src={`https://raw.githubusercontent.com/Shivansh-yadav13/simple-weather-app/main/src/assests/images/${weatherData.current.weather[0].main}.png`} alt="" /> : ""}
+                    </div>
                 </Card>
-                <Charts>
+                <Chart>
                     <LineChart width={1000} height={300} data={hrData}>
                         <CartesianGrid></CartesianGrid>
                         <XAxis dataKey="hr"></XAxis>
@@ -43,48 +43,11 @@ function CurrentWeather({ weatherData }) {
                         <Line type="monotone" dataKey="Temp" stroke="red"></Line>
                         <Line type="monotone" dataKey="WindSpeed" stroke="blue"></Line>
                     </LineChart>
-                </Charts>
+                </Chart>
             </Container>
         </>
     )
 }
 
-const Charts = styled.div`
-    width: fit-content;
-    display: flex;
-    padding: 2rem;
-    margin: 2rem;
-    background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
-    border-radius: 20px;
-`
 
-const Container = styled.div`
-    text-align: center;
-    display: flex;
-`
-const Card = styled.div`
-    display: flex;
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 2rem;
-    height: fit-content;
-    background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
-`
-
-const LeftContent = styled.div`
-    list-style: none;
-    font-size: 1.5rem;
-`
-
-const RightContent = styled.div``
-
-const UL = styled.ul`
-    text-align: left;
-    list-style: none;
-    text-align: left;
-`
 export default CurrentWeather
