@@ -29,9 +29,9 @@ export const Card = styled.div`
     justify-content: space-around;
     width: 20rem;
     font-size: ${(props) => props.fontSize};
-    background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(7px);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.4);
     border-radius: 20px;
 
     @media screen and (max-width: 1378px) {
